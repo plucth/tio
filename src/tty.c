@@ -2668,6 +2668,7 @@ int tty_connect(void)
     // Exit if piped input
     if (interactive_mode == false)
     {
+        tty_sync(device_fd);
         exit(EXIT_SUCCESS);
     }
 
